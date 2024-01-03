@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visiualizer</title>
+    <link rel="stylesheet" href="bsort.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <i class='bx bx-bar-chart-alt-2'></i>
+            <samp>Sorting Visiualizer</samp> 
+        </div>
+        <div class="div2">
+            <div class="top">
+                <i class='bx bx-menu'></i>
+                <samp class="heading">Menu</samp>
+            </div>
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <i class='bx bxs-home'></i>
+                        <samp>Home</samp>     
+                    </a>
+                </li>
+                <li class="dropdown-toggle">
+                    <i class='bx bxs-right-arrow bx-sm '></i>
+                    <span>Sorting Algorithm</span>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="bsort.html">
+                                <samp>Bubble Sorting</samp>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <samp>Insertion Sorting</samp>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <samp>Merge Sorting</samp>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-stopwatch'></i>
+                        <span>Time Complexity</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Code</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="div3">
+            <div class="left">
+                <label for="inputValues">Enter values (comma-separated): </label>
+                <input type="text" id="inputValues" placeholder="Enter 10 values" class="custom-input">      
+            </div>
+            <div class="right">
+                <div id="container"></div>
+                <div class="button-container">
+                    <button onClick="init()">init</button>
+                    <button onClick="bsort()">Bubble Sort</button>
+                    <!-- <button onClick="insert()">Insertion Sort</button>
+                    <button onClick="msort()">Merge Sort</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="div4">
+            <h2>Bubble Algorithm</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas maiores libero id tenetur odio labore sed quia modi illum a adipisci iure vel dolore veritatis, minus eos molestiae ut dolores. Vero autem ex optio nulla ipsam ducimus fugiat hic nisi, vitae iste, laudantium laboriosam! Cupiditate, expedita totam exercitationem culpa quidem vel dolores vero earum debitis perferendis explicabo ea veritatis corrupti reprehenderit aut. Iusto sequi magnam ullam in. Quod aliquid, porro atque repudiandae maiores voluptatem placeat quidem recusandae ratione cum autem delectus fugiat reprehenderit voluptatum cupiditate impedit ducimus reiciendis nam est! Vel fugiat, deleniti eveniet commodi est nemo maxime ex dolorum?
+        </div>
+    </div>
+    
+    <script src="index.js" defer></script>
+    <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
