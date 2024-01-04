@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Visiualizer</title>
-    <link rel="stylesheet" href="bsort.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     
 </head>
@@ -19,13 +20,8 @@
                 <i class='bx bx-menu'></i>
                 <samp class="heading">Menu</samp>
             </div>
+        
             <ul>
-                <li>
-                    <a href="index.html">
-                        <i class='bx bxs-home'></i>
-                        <samp>Home</samp>     
-                    </a>
-                </li>
                 <li class="dropdown-toggle">
                     <i class='bx bxs-right-arrow bx-sm '></i>
                     <span>Sorting Algorithm</span>
@@ -62,10 +58,24 @@
             </ul>
         </div>
 
+        <!-- <div class="div3">
+            <div id="container"></div>
+            <div>
+                <button onClick="init()">init</button>
+                <button onClick="bsort()">Bubble Sort</button>
+                <button onClick="insert()">Insertion Sort</button>
+                <button onClick="msort()">Merge Sort</button>
+            </div>
+        </div> -->
         <div class="div3">
             <div class="left">
-                <label for="inputValues">Enter values (comma-separated): </label>
-                <input type="text" id="inputValues" placeholder="Enter 10 values" class="custom-input">      
+                <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
+                <input type="text" id="inputValues" placeholder="Enter 10 values" class="custom-input">
+                
+                <div class="valuedisp">
+                    <h4>Number of swaps: <span id="swapCount">0</span></h4>
+                    <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
+                </div>
             </div>
             <div class="right">
                 <div id="container"></div>
@@ -73,13 +83,13 @@
                     <button onClick="init()">init</button>
                     <button onClick="bsort()">Bubble Sort</button>
                     <!-- <button onClick="insert()">Insertion Sort</button>
-                    <button onClick="msort()">Merge Sort</button> -->
+                    <button onClick="ssort()">Selection Sort</button> -->
                 </div>
             </div>
         </div>
 
         <div class="div4">
-            <h2>Bubble Algorithm</h2>
+            <h2>Sorting Algorithm</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas maiores libero id tenetur odio labore sed quia modi illum a adipisci iure vel dolore veritatis, minus eos molestiae ut dolores. Vero autem ex optio nulla ipsam ducimus fugiat hic nisi, vitae iste, laudantium laboriosam! Cupiditate, expedita totam exercitationem culpa quidem vel dolores vero earum debitis perferendis explicabo ea veritatis corrupti reprehenderit aut. Iusto sequi magnam ullam in. Quod aliquid, porro atque repudiandae maiores voluptatem placeat quidem recusandae ratione cum autem delectus fugiat reprehenderit voluptatum cupiditate impedit ducimus reiciendis nam est! Vel fugiat, deleniti eveniet commodi est nemo maxime ex dolorum?
         </div>
     </div>
@@ -88,4 +98,4 @@
     <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
     
 </body>
-</html>
+</html>>
