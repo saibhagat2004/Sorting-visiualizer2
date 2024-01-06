@@ -63,10 +63,8 @@ function animate(moves){
     showBars(move);
     setTimeout(function(){
         animate(moves);
-    },50);
+    },animationSpeed);
 }
-
-
 
 // function bubbleSort(array){
 //     const moves=[];                   //recored changes
@@ -239,3 +237,62 @@ document.querySelector('.dropdown-toggle i').addEventListener('click', function(
     }
 });
 
+// let animationSpeed = 50;  // Default animation speed
+
+// // Event listener for the range input
+// document.getElementById("speedRange").addEventListener("input", function () {
+//     animationSpeed = this.value;
+// });
+
+// function animate(moves){
+//     if(moves.length==0){             // if there is no swap in array we just return and done animating
+//         showBars();
+//         return ;
+//     }
+//     const move=moves.shift();
+//     const [i,j]=move.indices;
+//     if(move.type=="swap"){
+//         [array[i],array[j]]=[array[j],array[i]];
+//     }
+//     showBars(move);
+//     setTimeout(function(){
+//         animate(moves);
+//     },animationSpeed);
+// }
+
+let animationSpeed = 540-50;  // Default animation speed
+
+
+// Event listener for the range input
+document.getElementById("speedRange").addEventListener("input", function () {
+    animationSpeed = 540 - this.value;  // Reverse the value
+    updateSpeedValue(this.value);
+    function updateSpeedValue(value) {
+        document.getElementById("speedValue").textContent = value;
+    }
+});
+
+
+
+function animate(moves) {
+    if (moves.length === 0) {
+        showBars();
+        return;
+    }
+
+    const move = moves.shift();
+    const [i, j] = move.indices;
+
+    if (move.type === "swap") {
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    showBars(move);
+
+    setTimeout(function () {
+        animate(moves);
+    }, animationSpeed);  // Use the dynamic animation speed
+}
+
+// Initial update of the displayed speed value
+updateSpeedValue(animationSpeed);
