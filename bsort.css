@@ -23,6 +23,7 @@ body {
     color: white;
     padding: 13px;
     font-size:30px;    
+    margin-bottom: 88px;
 }
 .div1 i {
     padding-right:8px;
@@ -182,4 +183,10 @@ button:hover {
 
 button:focus {
     outline: none;
+}
+
+
+.div4 img{
+    max-width: 460px;
+    float: right;
 }
