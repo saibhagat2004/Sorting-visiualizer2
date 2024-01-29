@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorting Visiualizer</title>
-    <link rel="stylesheet" href="bsort.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/static/style.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     
 </head>
@@ -14,25 +14,28 @@
         <div class="div1">
             <i class='bx bx-bar-chart-alt-2'></i>
             <samp>Sorting Visiualizer</samp> 
+            <p>{{username}}</p>
+
         </div>
         <div class="div2">
             <div class="top">
                 <i class='bx bx-menu'></i>
                 <samp class="heading">Menu</samp>
             </div>
-       
         
             <ul>
-                <li>
-                    <a href="index.html">
-                        <i class='bx bxs-home'></i>
-                        <samp>Home</samp>
-                    </a>
-                </li>
                 <li class="dropdown-toggle">
                     <i class='bx bxs-right-arrow bx-sm '></i>
                     <span>Sorting Algorithm</span>
                     <ul class="dropdown-menu">
+                        <li>
+                            <!-- <a href="/templates/bsort.html">
+                                <samp>Bubble Sorting</samp>
+                            </a> -->
+                            <a href="{{ url_for('bsort') }}">
+                                <samp>Bubble Sorting</samp>
+                            </a>
+                        </li>
                         <li>
                             <a href="#">
                                 <samp>Insertion Sorting</samp>
@@ -78,55 +81,32 @@
                     <h4>Number of swaps: <span id="swapCount">0</span></h4>
                     <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
                 </div>
-
+            
                 <div class="speed-control">
                     <label for="speedRange">Animation Speed:</label>
                     <input type="range" id="speedRange" min="40" max="500" value="50">
                     <span id="speedValue">50</span>
                 </div>
-            
+                
             </div>
             <div class="right">
                 <div id="container"></div>
                 <div class="button-container">
                     <button onClick="init()">init</button>
                     <button onClick="bsort()">Bubble Sort</button>
-                    <!-- <button onClick="insert()">Insertion Sort</button>
-                    <button onClick="ssort()">Selection Sort</button> -->
+                    <button onClick="insert()">Insertion Sort</button>
+                    <button onClick="ssort()">Selection Sort</button>
                 </div>
             </div>
         </div>
 
         <div class="div4">
-            <h2>Bubble Sorting</h2>
-            <img src="images/bubble-short.png" alt="bubble-short image" title="bubble sort image">
-            <p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.</p>
-            <div class="algo-step">
-                <h3>In Bubble Sort algorithm,</h4>
-                <ul>
-                    <li>
-                        traverse from left and compare adjacent elements and the higher one is placed at right side. 
-                    </li>
-                    <li>
-                        In this way, the largest element is moved to the rightmost end at first. 
-                    </li>
-                    <li>
-                        This process is then continued to find the second largest and place it and so on until the data is sorted.
-                    </li>
-                    <li>
-                        <h4>Total no. of passes: n-1</h4>
-                    </li>
-                    <li>
-                        <h4>Total no. of comparisons: n*(n-1)/2</h4>
-                    </li>
-                </ul>
-            </div>
-
+            <h2>Sorting Algorithm</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas maiores libero id tenetur odio labore sed quia modi illum a adipisci iure vel dolore veritatis, minus eos molestiae ut dolores. Vero autem ex optio nulla ipsam ducimus fugiat hic nisi, vitae iste, laudantium laboriosam! Cupiditate, expedita totam exercitationem culpa quidem vel dolores vero earum debitis perferendis explicabo ea veritatis corrupti reprehenderit aut. Iusto sequi magnam ullam in. Quod aliquid, porro atque repudiandae maiores voluptatem placeat quidem recusandae ratione cum autem delectus fugiat reprehenderit voluptatum cupiditate impedit ducimus reiciendis nam est! Vel fugiat, deleniti eveniet commodi est nemo maxime ex dolorum?
         </div>
     </div>
-
     
-    <script src="index.js" defer></script>
+    <script src="/static/index.js"></script>
     <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
     
 </body>
