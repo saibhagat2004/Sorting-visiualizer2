@@ -277,16 +277,17 @@ button:focus {
     flex-direction: column;
     background-color:  rgb(137, 225, 137);
     border-radius: 30px;
-    width: 700px;
+    width: 855px;
     padding-left: 30px;
     font-size: large;
 
 }
 .working img{
-    width: 660px;
+    min-width: 800px; 
     height: 300px;
     margin: 0px;
 }
+
 
 .bottom-div{
     display: flex;

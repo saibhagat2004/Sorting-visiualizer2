@@ -62,6 +62,51 @@ function generate(language){
             print("Sorted array:", arr)
 
             `
+            case 'Javascript':
+                return `
+                function bubbleSort(arr) {
+                    // Loop through the array multiple times until no swaps occur
+                    for (let i = 0; i < arr.length - 1; i++) {
+                      let swapped = false;
+                  
+                      // Compare adjacent elements and swap if needed
+                      for (let j = 0; j < arr.length - i - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                          [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+                          swapped = true;
+                        }
+                      }
+                  
+                      // If no swaps occurred in the inner loop, the array is already sorted
+                      if (!swapped) {
+                        break;
+                      }
+                    }
+                  
+                    // Return the sorted array
+                    return arr;
+                  }
+                  `
+            
+            case 'C':
+                return `
+                void bubbleSort(int arr[], int n) {
+                    for (int i = 0; i < n - 1; i++) {
+                      int swapped = 0;
+                      for (int j = 0; j < n - i - 1; j++) {
+                        if (arr[j] > arr[j + 1]) {
+                          swap(&arr[j], &arr[j + 1]);
+                          swapped = 1;
+                        }
+                      }
+                      if (swapped == 0) {
+                        break;
+                      }
+                    }
+                  }
+                  `
+                
+
 
     }
 }
