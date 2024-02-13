@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting visualizer</title>
+    <link rel="stylesheet" href="/static/bsort.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <i class='bx bx-bar-chart-alt-2'></i>
+            <samp>Sorting Visualizer</samp> 
+        </div>
+        <div class="div2">
+            <div class="top">
+                <i class='bx bx-menu'></i>
+                <samp class="heading">Menu</samp>
+            </div>
+
+            <ul>
+                <li>
+                    <a href="{{ url_for('dashboard') }}">
+                        <i class='bx bxs-home'></i>
+                        <samp>Home</samp>
+                    </a>
+                </li>
+                <li class="dropdown-toggle">
+                    <i class='bx bxs-right-arrow bx-sm '></i>
+                    <span>Sorting Algorithm</span>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{{ url_for('bsort')}}">
+                                <samp>Insertion Sorting</samp>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('ssort')}}">
+                                <samp>Selection Sort</samp>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-stopwatch'></i>
+                        <span>Time Complexity</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Code</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- <div class="div3">
+            <div id="container"></div>
+            <div>
+                <button onClick="init()">init</button>
+                <button onClick="bsort()">Bubble Sort</button>
+                <button onClick="insert()">Insertion Sort</button>
+                <button onClick="msort()">Merge Sort</button>
+            </div>
+        </div> -->
+        <div class="div3">
+            <div class="left">
+                <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
+                <input type="text" id="inputValues" placeholder="Enter values" class="custom-input">
+            
+                <div class="valuedisp">
+                    <h4>Number of swaps: <span id="swapCount">0</span></h4>
+                    <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
+                </div>
+
+                <div class="speed-control">
+                    <label for="speedRange">Animation Speed:</label>
+                    <input type="range" id="speedRange" min="40" max="500" value="50">
+                    <span id="speedValue">50</span>
+                </div>
+            
+            </div>
+            <div class="right">
+                <div id="container"></div>
+                <div class="button-container">
+                    <button onClick="init()">init</button>
+                    <button onClick="insert()">Insertion Sort</button>
+                    <!-- <button onClick="bsort()">Bubble Sort</button>
+                    <button onClick="ssort()">Selection Sort</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="div4">
+            <h2>Insertion Sorting</h2>
+            <img src="../static/images/insertion-sort.png" alt="insertion-short image" title="insertion sort image">
+            <p>Insertion sort is a simple sorting algorithm that works similar to the way you sort playing cards in your hands. The array is virtually split into a sorted and an unsorted part. Values from the unsorted part are picked and placed at the correct position in the sorted part.  However, its performance can degrade significantly for large input sizes due to its quadratic time complexity.</p>
+            <div class="algo-step">
+                <h3>In Insertion Sort algorithm,</h4>
+                <ul>
+                    <li>
+                        To sort an array of size N in ascending order iterate over the array and compare the current element (key) to its predecessor.
+                    </li>
+                    <li>
+                        If the key element is smaller than its predecessor, compare it to the elements before.
+                    </li>
+                    <li>
+                        Move the greater elements one position up to make space for the swapped element.
+                    </li>
+                    <li>
+                        <h4>Total no. of passes: n-1</h4>
+                    </li>
+                    <li>
+                        <h4>Total no. of comparisons: n*(n-1)/2</h4>
+                    </li>
+                </ul>
+            </div>
+            <div class="code-container">
+                <div class="codes">
+                    <button  class="C++ code">C++</button>
+                    <button class="Python code">Python</button>
+                    <button class="Javascript code">Javascript</button>
+                    <button  class="C code">C</button>
+                </div>
+                <div id="code-snippet"></div>
+                <button id="copyBtn" >
+                    <i class='bx bx-clipboard' ></i>
+                    <!-- <i class='bx bx-clipboard bx-tada bx-rotate-90' ></i> -->
+                    Copy to Clipboard
+                </button>
+            </div>
+
+        </div>
+    </div>
+   
+   
+    
+    <script src="../static/index.js" defer></script>
+    <script src="/static/bsort.js" defer></script>
+
+    <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
