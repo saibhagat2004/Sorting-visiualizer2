@@ -16,10 +16,10 @@ function pauseAnimation() {
 function restartAnimation() {
     animationPaused = false;
     animate(moves);
-}3
+}
 
-let n=10;
-let array=[];
+const n=10;
+const array=[];
 init();
 
 function init() {
@@ -32,14 +32,16 @@ function init() {
     // Check if input values are provided
     if (inputValues.trim() === "") {
         // Generate random values if no input is provided
-        n=10
         for (let i = 0; i < n; i++) {
             array[i] =Math.round(Math.random()*100);
         }
     } else {
-        array=[]
-    
-        n = inputArray.length;
+        // Use the provided input values
+        if (inputArray.length !== n) {
+            alert(`Please enter ${n} values.`);
+            return;
+        }
+
         for (let i = 0; i < n; i++) {
             array[i] = inputArray[i];
         }

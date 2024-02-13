@@ -4,24 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link href="/static/register.css" rel="stylesheet">
+
 </head>
 <body>
-    <h1>Login</h1>
+   
     <div class="login" >
         <form action="/login" method="post">
-            <div class="mb-3">
-                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
-            </div>
-            <div class="mb-3">
-                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
-            </div>
-            <button class="btn btn-primary" type="submit">Log In</button>
+            <div class="container">
+                <h1> Login</h1>
+                <div class="mb-3">
+                    <label for="username"><b>Username</b></label>
+                    <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+                </div>
+                <div class="mb-3">
+                    <label for="Password"><b>Password</b></label>
+                    <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+                </div>
+                <button class="registerbtn" type="submit">Log In</button>
         </form>
-
-        <a href="{{url_for('register')}}">Don't have account Register Please
-        </a>
-    
+                <div class="container signin">
+                    <p>Do not Have an account <a href="{{url_for('register')}}">Register</a>.</p>
+                </div>
        </div>
-    
+       {% with messages = get_flashed_messages() %}
+       {% if messages %}
+           <class="flashes" style="color: red;"> 
+               {% for message in messages %}
+                   <h2>{{ message }}</h2>
+               {% endfor %}
+       {% endif %}
+   {% endwith %}
+       
+           
 </body>
 </html>

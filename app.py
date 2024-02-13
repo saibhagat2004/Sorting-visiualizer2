@@ -82,7 +82,7 @@ def register():
             db.session.commit()
             session["user_id"] = new_user.id
             session["username"] = new_user.username
-            return render_template('index.html')
+            return render_template('index.html', username=username)
 
         else:
             return "Password and password-repeat do not match"
@@ -104,6 +104,22 @@ def bsort():
     username = session.get('username')
 
     return render_template('bsort.html', user_id=user_id, username=username)
+
+@app.route('/insert')
+def insert():
+        # Access user info from the session
+    user_id = session.get('user_id')
+    username = session.get('username')
+
+    return render_template('insert.html', user_id=user_id, username=username)
+
+@app.route('/ssort')
+def ssort():
+        # Access user info from the session
+    user_id = session.get('user_id')
+    username = session.get('username')
+
+    return render_template('ssort.html', user_id=user_id, username=username)
 
 if __name__=='__main__':
     app.run(debug=True)

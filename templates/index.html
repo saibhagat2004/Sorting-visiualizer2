@@ -4,17 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Visiualizer</title>
+    <title>Sorting visualizer</title>
     <link rel="stylesheet" href="/static/style.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-    
 </head>
 <body>
     <div class="parent">
         <div class="div1">
-            <i class='bx bx-bar-chart-alt-2'></i>
-            <samp>Sorting Visiualizer</samp> 
-            <p>{{username}}</p>
+            <div class="l">  <i class='bx Sorting visualizerbx-bar-chart-alt-2'></i>
+                <samp>Sorting Visiualizer</samp></div>
+            <div class="r"> <p>{{username}}</p>  </div>
+           
+           
 
         </div>
         <div class="div2">
@@ -37,13 +38,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="{{ url_for('insert')}}">
                                 <samp>Insertion Sorting</samp>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <samp>Merge Sorting</samp>
+                            <a href=" {{ url_for('ssort')}} ">
+                                <samp>Selection Sort</samp>
                             </a>
                         </li>
                     </ul>
@@ -73,10 +74,9 @@
             </div>
         </div> -->
         <div class="div3">
-            <div class="left">
+            <!-- <div class="left">
                 <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
                 <input type="text" id="inputValues" placeholder="Enter 10 values" class="custom-input">
-                
                 <div class="valuedisp">
                     <h4>Number of swaps: <span id="swapCount">0</span></h4>
                     <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
@@ -88,7 +88,23 @@
                     <span id="speedValue">50</span>
                 </div>
                 
+            </div> -->
+            <div class="left">
+                <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
+                <input class="custom-input" type="text" id="inputValues" placeholder="Enter values ">
+                
+                <div class="valuedisp">
+                    <h4>Number of swaps: <span id="swapCount">0</span></h4>
+                    <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
+                </div>
+            
+                <div class="speed-control">
+                    <label for="speedRange">Animation Speed:</label>
+                    <input type="range" id="speedRange" min="40" max="500" value="50">
+                    <span id="speedValue">50</span>
+                </div>
             </div>
+            
             <div class="right">
                 <div id="container"></div>
                 <div class="button-container">
@@ -96,18 +112,76 @@
                     <button onClick="bsort()">Bubble Sort</button>
                     <button onClick="insert()">Insertion Sort</button>
                     <button onClick="ssort()">Selection Sort</button>
+                    <button onClick="qsort()">Quick Sort</button>
+                    <!-- <button onclick="toggleAnimation()">Pause/Resume</button>
+                    <button onclick="restartAnimation()">Restart</button> -->
                 </div>
             </div>
         </div>
 
         <div class="div4">
-            <h2>Sorting Algorithm</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas maiores libero id tenetur odio labore sed quia modi illum a adipisci iure vel dolore veritatis, minus eos molestiae ut dolores. Vero autem ex optio nulla ipsam ducimus fugiat hic nisi, vitae iste, laudantium laboriosam! Cupiditate, expedita totam exercitationem culpa quidem vel dolores vero earum debitis perferendis explicabo ea veritatis corrupti reprehenderit aut. Iusto sequi magnam ullam in. Quod aliquid, porro atque repudiandae maiores voluptatem placeat quidem recusandae ratione cum autem delectus fugiat reprehenderit voluptatum cupiditate impedit ducimus reiciendis nam est! Vel fugiat, deleniti eveniet commodi est nemo maxime ex dolorum?
-        </div>
-    </div>
+<h2>Sorting Algorithm</h2>
+<!-- <pre>
+Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order or lexicographical order.
+
+This operation is one of the most important and widespread in computer science. For a long time, new methods have been developed to make this procedure faster and faster.
+
+There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified according to two metrics: space complexity
+and time complexity.
+
+Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing respectively the upper bound, the tight bound, 
+and the lower bound of the algorithm's complexity, specifying in brackets an expression in terms of n, the number of the elements of the data structure.
+
+
+<h3>Most of them fall into two categories:</h3><ul><li>Logarithmic
+The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).
+</li>
+<li>Quadratic
+    The complexity is proportional to the square of n.
+    An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).
+    Space and time complexity can also be further subdivided into 3 different cases: best case, average case and worst case.
+</li>
+</ul>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their 
+functioning while having fun!
+</pre> -->
+<pre>
     
+  Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order or 
+  lexicographical order.
+
+  This operation is one of the most important and widespread in computer science. For a long time, new methods have bee developed 
+  to make this procedure faster and faster.
+        
+  There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified
+  according  to two metrics: space complexity and time complexity.
+        
+ Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing 
+ respectively the  upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in brackets 
+ an expression in terms of n, the number of the elements of the data structure.
+        
+  
+</pre>
+<div class="hbottom">
+    <h3>Most of them fall into two categories:</h3><ul><li>Logarithmic
+        The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+        An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).
+        </li>
+        <li>Quadratic
+            The complexity is proportional to the square of n.
+            An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).
+            Space and time complexity can also be further subdivided into 3 different cases: best case, average case and worst case.
+        </li>
+        </ul>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their 
+        functioning while having fun!
+
+</div>
+        </div>
+</div>
+    
+    <!-- <script src="/static/index.js"></script> -->
     <script src="/static/index.js"></script>
     <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
     
 </body>
-</html>>
+</html>
