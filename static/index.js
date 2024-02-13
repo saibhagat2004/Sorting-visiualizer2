@@ -7,7 +7,7 @@ function toggleAnimation() {
         pauseAnimation();
     }
 }
-
+//sa
 function pauseAnimation() {
     animationPaused = true;
     clearTimeout(animationTimeout);
