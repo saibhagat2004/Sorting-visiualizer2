@@ -13,7 +13,7 @@
     <div class="parent">
         <div class="div1">
             <i class='bx bx-bar-chart-alt-2'></i>
-            <samp>Sorting Visiualizer</samp> 
+            <samp>Sorting Visualizer</samp> 
         </div>
         <div class="div2">
             <div class="top">
@@ -24,7 +24,7 @@
         
             <ul>
                 <li>
-                    <a href="/templates/index.html">
+                    <a href="index.html">
                         <i class='bx bxs-home'></i>
                         <samp>Home</samp>
                     </a>
@@ -34,13 +34,13 @@
                     <span>Sorting Algorithm</span>
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/templates/insert.html">
+                            <a href="insert.html">
                                 <samp>Insertion Sorting</samp>
                             </a>
                         </li>
                         <li>
-                            <a href="/templates/ssort.html">
-                                <samp>Selection Sort</samp>
+                            <a href="bsort.html">
+                                <samp>Bubble Sort</samp>
                             </a>
                         </li>
                     </ul>
@@ -90,28 +90,31 @@
                 <div id="container"></div>
                 <div class="button-container">
                     <button onClick="init()">init</button>
-                    <button onClick="bsort()">Bubble Sort</button>
+                    <button onClick="ssort()">Selection Sort</button> 
                     <!-- <button onClick="insert()">Insertion Sort</button>
-                    <button onClick="ssort()">Selection Sort</button> -->
+                        <button onClick="bsort()">Bubble Sort</button> -->
                 </div>
             </div>
         </div>
 
         <div class="div4">
-            <h2>Bubble Sorting</h2>
-            <img src="/static/images/bubble-short.png" alt="bubble-short image" title="bubble sort image">
-            <p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.</p>
+            <h2>Selection Sorting</h2>
+            <img src="/static/images/selectionsoert.jpg" alt="selection-short image" title="selection sort image">
+            <p>Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. Although simple to understand, it is not the most efficient sorting algorithm for large datasets.</p>
             <div class="algo-step">
-                <h3>In Bubble Sort algorithm,</h4>
+                <h3>In Selection Sort algorithm,</h4>
                 <ul>
                     <li>
-                        traverse from left and compare adjacent elements and the higher one is placed at right side. 
+                        The entire list is considered unsorted initially.
                     </li>
                     <li>
-                        In this way, the largest element is moved to the rightmost end at first. 
+                        In each iteration, the algorithm identifies the smallest (or largest) element in the unsorted portion.
                     </li>
                     <li>
-                        This process is then continued to find the second largest and place it and so on until the data is sorted.
+                        The selected element is swapped with the first element of the unsorted part.
+                    </li>
+                    <li>
+                        This process is repeated for the remaining unsorted portion until the entire list is sorted.
                     </li>
                     <li>
                         <h4>Total no. of passes: n-1</h4>
@@ -119,54 +122,32 @@
                     <li>
                         <h4>Total no. of comparisons: n*(n-1)/2</h4>
                     </li>
-
                 </ul>
             </div>
-         
-            <h2>How does Bubble Sort Work? </h2>
-            <h3>Let us understand the working of bubble sort with the help of the following illustration:
-            </h3>
-
-            <div class="bottom-div">
-                <div class="working">
-              
-                    <h4>Input: arr[] = {6, 3, 0, 5}</h4>
-                    <h3>First Pass:</h3>
-                    <h4>The largest element is placed in its correct position, i.e., the end of the array.</h4> 
-                    <img src="/static/images/bsort1.png">
-                    <h3>Second Pass: </h3>
-                    <h4>Place the second largest element at correct position </h4>
-                    <img src="/static/images/bsort2.png">
-                    <h3>Third Pass: </h3>
-                    <h4>Place the remaining two elements at their correct positions.</h4>
-                    <img src="/static/images/bsort3.png">
-                    
-                </div>   
-                <div class="code-container">
-                    <div class="codes">
-                        <button  class="C++ code">C++</button>
-                        <button class="Python code">Python</button>
-                        <button class="Javascript code">Javascript</button>
-                        <button  class="C code">C</button>
-                    </div>
-                    <div id="code-snippet"></div>
-                    <button id="copyBtn" >
-                        <i class='bx bx-clipboard' ></i>
-                        <!-- <i class='bx bx-clipboard bx-tada bx-rotate-90' ></i> -->
-                        Copy to Clipboard
-                    </button>
-                </div>          
+            <div class="code-container">
+                <div class="codes">
+                    <button  class="C++ code">C++</button>
+                    <button class="Python code">Python</button>
+                    <button class="Javascript code">Javascript</button>
+                    <button  class="C code">C</button>
+                </div>
+                <div id="code-snippet"></div>
+                <button id="copyBtn" >
+                    <i class='bx bx-clipboard' ></i>
+                    <!-- <i class='bx bx-clipboard bx-tada bx-rotate-90' ></i> -->
+                    Copy to Clipboard
+                </button>
             </div>
-            
+           
 
-       
-        
         </div>
     </div>
+ 
 
     
+    <script src="/static/bsort.js" defer></script>
     <script src="/static/index.js" defer></script>
     <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
-    <script src="/static/bsort.js"></script>
+    
 </body>
-</html>>
+</html>
