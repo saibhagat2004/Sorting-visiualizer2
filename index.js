@@ -1,3 +1,9 @@
+document.getElementById('menuToggle').addEventListener('click', function () {
+    const menu = document.querySelector('.menu');
+    menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'flex' : 'none';
+});
+
+
 let animationPaused = false;
 let animationTimeout;
 function toggleAnimation() {
