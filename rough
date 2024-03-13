@@ -1,0 +1,531 @@
+/* body {
+    margin: 0px;
+    padding: 0px;
+      border: 0px;
+    }
+
+
+@media (min-width: 768px) {
+        /* Add desktop-specific styles here */
+        body {
+            font-size: 16px;
+        }
+        .parent {
+            display: grid;
+            height: 212vh;
+            grid-template-columns: 0.8fr repeat(3, 1fr);
+            grid-template-columns: 1fr repeat(4, 1fr);
+            grid-column-gap: 20px;
+            grid-row-gap: 22px;
+        }
+        
+        .div1 {
+            grid-area: 1 / 1 / 3 / 8;
+            display: flex;
+            align-items: center;
+             /* or padding: 0; */
+            height:60px;
+            background-color: black;
+            color: white;
+            padding: 13px;
+            font-size:30px; 
+            justify-content:space-between ;
+           
+        }
+        .div1 i {
+            padding-right:8px;
+        }
+        
+        .heading{
+            font-size: 40px;
+        }
+        /* .div1 {
+            position: sticky;
+            top: 0;
+            z-index: 100; /* Optional: Add a z-index to control the stacking order */
+        */
+        .div1 {
+        
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .div2 {
+            position: sticky;
+            top: 1;
+            z-index: 100; /* Optional: Add a z-index to control the stacking order */
+            grid-area: 2 / 1 / 6 / 2;
+            font-size: 25px;
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            box-shadow: 6px 5px 11px black;
+            transition: transform 0.3s ease;
+        }
+        
+        .div2 i{
+            font-size: 33px;
+            padding: 5px;
+        }
+        
+        
+        
+        .div2 a {
+            display: block;
+            padding: 5px; /* Add padding for better spacing */
+            background-color: white; /* Set the initial background color to match the container */
+            text-decoration: none; /* Remove the default underline for links */
+            color: black; /* Set the text color */
+            transition: background-color 0.3s; /* Add a smooth transition for the background color change */
+        }
+        .div2 a:hover {
+            background-color: black; /* Change the background color to black on hover */
+            color: white; /* Change text color on hover for better visibility */
+        }
+        
+        .div2 ul li {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            font-size: 27px;
+        }
+    
+        .div3{
+            grid-area: 2 / 2 / 4 / 6;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: whitesmoke;
+            border-radius: 15px;
+            box-shadow: 6px 5px 11px black;
+            transition: transform 0.3s ease;
+            padding: 15px;
+          }
+        .button-container{
+              justify-content: center;
+              display: flex;
+          }
+        .left{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px; /* Optional: Add margin between rows */
+        }
+        /* Apply styles to the input box with the class "custom-input" */
+        .custom-input {
+            width: 300px; /* Set the width to your preferred size */
+            height: 35px; /* Set the height to your preferred size */
+            /* Additional styling, if needed */
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .valuedisp{
+            display: none;
+        }
+        
+        .div4{
+            grid-area: 4 / 2 / 6 / 8;
+            background-color: rgb(162, 255, 162);
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 6px 5px 11px black;
+            transition: transform 0.3s ease;
+        }
+        
+        .div4 p{
+          font-size: 28px;
+        }
+        
+        .div4 h2{
+            font-size: 30px;
+        }
+        
+        .div4 pre{
+            font-weight: 200;
+            font-size: 21px;
+            font-family: monospace;
+        }
+        
+        /* Initially hide the dropdown menu */
+        .dropdown-menu {
+            display: none;
+        }
+        
+        .dropdown-menu  li a samp {
+            font-size: 20px;
+        }
+        /* Style the arrow icon */
+        .dropdown-toggle i {
+            cursor: pointer;
+        }
+        
+        /* On hover, show the dropdown menu */
+        .dropdown-toggle:hover .dropdown-menu {
+            display: block;
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #container {
+            display: flex;
+            /* align-items: center; */
+            align-items: flex-end;
+            justify-content: center;
+            height: 200px;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .bar {
+            width: 30px;
+            background-color: #3498db;
+            margin: 0 2px;
+            transition: height 0.2s;
+        }
+        
+        button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background-color:black;
+            transition: background-color 0.4s ease; /* Add a smooth transition for the background color change */
+            box-shadow: 6px 5px 11px black;
+            color: #fff;
+        }
+        
+        button:focus {
+            outline: none;
+        }
+        
+        
+        
+        .hbottom{
+            padding: 3px;
+            width:970px;
+            font-size:25px;
+            border-radius: 20px;
+            background-color: rgb(137, 225, 137);
+        }
+        
+    }
+
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    body {
+      font-size: 14px; /* Adjust font size for smaller screens */ 
+    
+    }
+  }
+  
+  /* Media query for smartphones */
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px; /* Further adjust font size for smaller screens */
+    }
+    .menu {
+        display: flex;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    .div1 {
+        display: flex;
+        align-items: center;
+        height:20px;
+        background-color: black;
+        color: white;
+        padding: 13px;
+        font-size:15px; 
+        justify-content:space-between ;
+       
+    }
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        width: 296px;
+        background-color: seashell;
+        z-index: 1;
+        font-size: 50px;
+    }
+
+    .menu li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    #menuToggle {
+        cursor: pointer;
+    }
+
+    .div2 i{
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+    
+    
+    .div2 a {
+        display: block;
+        padding: 5px; /* Add padding for better spacing */
+        background-color: white; /* Set the initial background color to match the container */
+        text-decoration: none; /* Remove the default underline for links */
+        color: black; /* Set the text color */
+        transition: background-color 0.3s; /* Add a smooth transition for the background color change */
+    }
+    .div2 a:hover {
+        background-color: black; /* Change the background color to black on hover */
+        color: white; /* Change text color on hover for better visibility */
+    }
+    
+    .div2 ul li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 16px;
+    }
+    .div3{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: whitesmoke;
+        border-radius: 15px;
+        box-shadow: 6px 5px 11px black;
+        transition: transform 0.3s ease;
+        padding: 15px;
+        padding-top: 15px;
+        width: 300px;
+      }
+      .button-container{
+          justify-content: center;
+          display: flex;
+      }
+    .left{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px; /* Optional: Add margin between rows */
+    }
+    /* Apply styles to the input box with the class "custom-input" */
+    .custom-input {
+        width: 300px; /* Set the width to your preferred size */
+        height: 35px; /* Set the height to your preferred size */
+        /* Additional styling, if needed */
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .valuedisp{
+        display: none;
+    }
+     #container{
+        display: flex;
+        padding: 20px;
+    }  
+  }
+
+  /* Default styles for larger screens */
+
+
+/* Mobile styles (hidden by default) */
+@media (max-width: 767px) {
+    
+}
+
+
+
+
+
+html
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting visualizer</title>
+    <link rel="stylesheet" href="style.css"><link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="parent">
+        <div class="div1">
+            <div class="l">  <i class='bx Sorting visualizerbx-bar-chart-alt-2'></i>
+                <samp>Sorting Visiualizer</samp></div>
+           
+           
+
+        </div>
+        <div class="div2">
+            <div class="top" id="menuToggle">
+                <i class='bx bx-menu'></i>
+                <samp class="heading">Menu</samp>
+            </div>
+        
+            <ul class="menu">
+                <li class="dropdown-toggle">
+                    <i class='bx bxs-right-arrow bx-sm'></i>
+                    <span>Sorting Algorithm</span>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="bsort.html">
+                                <samp>Bubble Sorting</samp>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="insert.html">
+                                <samp>Insertion Sorting</samp>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="ssort.html">
+                                <samp>Selection Sort</samp>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-stopwatch'></i>
+                        <span>Time Complexity</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="#">
+                        <i class='bx bx-code-alt'></i>
+                        <span>Code</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        
+        
+        <!-- <div class="div3">
+            <div id="container"></div>
+            <div>
+                <button onClick="init()">init</button>
+                <button onClick="bsort()">Bubble Sort</button>
+                <button onClick="insert()">Insertion Sort</button>
+                <button onClick="msort()">Merge Sort</button>
+            </div>
+        </div> -->
+        <div class="div3">
+            <!-- <div class="left">
+                <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
+                <input type="text" id="inputValues" placeholder="Enter 10 values" class="custom-input">
+                <div class="valuedisp">
+                    <h4>Number of swaps: <span id="swapCount">0</span></h4>
+                    <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
+                </div>
+            
+                <div class="speed-control">
+                    <label for="speedRange">Animation Speed:</label>
+                    <input type="range" id="speedRange" min="40" max="500" value="50">
+                    <span id="speedValue">50</span>
+                </div>
+                
+            </div> -->
+            <div class="left">
+                <label for="inputValues"><h3>Enter values (comma-separated):</h3> </label>
+                <input class="custom-input" type="text" id="inputValues" placeholder="Enter values ">
+                
+                <div class="valuedisp">
+                    <h4>Number of swaps: <span id="swapCount">0</span></h4>
+                    <h4>Time taken: <span id="timeTaken">0 ms</span></h4>
+                </div>
+            
+                <div class="speed-control">
+                    <label for="speedRange">Animation Speed:</label>
+                    <input type="range" id="speedRange" min="40" max="500" value="50">
+                    <span id="speedValue">50</span>
+                </div>
+            </div>
+            
+            <div class="right">
+                <div id="container"></div>
+                <div class="button-container">
+                    <button onClick="init()">init</button>
+                    <button onClick="bsort()">Bubble Sort</button>
+                    <button onClick="insert()">Insertion Sort</button>
+                    <button onClick="ssort()">Selection Sort</button>
+                    <button onClick="qsort()">Quick Sort</button>
+                    <!-- <button onclick="toggleAnimation()">Pause/Resume</button>
+                    <button onclick="restartAnimation()">Restart</button> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="div4">
+<h2>Sorting Algorithm</h2>
+<!-- <pre>
+Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order or lexicographical order.
+
+This operation is one of the most important and widespread in computer science. For a long time, new methods have been developed to make this procedure faster and faster.
+
+There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified according to two metrics: space complexity
+and time complexity.
+
+Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing respectively the upper bound, the tight bound, 
+and the lower bound of the algorithm's complexity, specifying in brackets an expression in terms of n, the number of the elements of the data structure.
+
+
+<h3>Most of them fall into two categories:</h3><ul><li>Logarithmic
+The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).
+</li>
+<li>Quadratic
+    The complexity is proportional to the square of n.
+    An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).
+    Space and time complexity can also be further subdivided into 3 different cases: best case, average case and worst case.
+</li>
+</ul>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their 
+functioning while having fun!
+</pre> -->
+<pre>
+    
+  Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order or 
+  lexicographical order.
+
+  This operation is one of the most important and widespread in computer science. For a long time, new methods have bee developed 
+  to make this procedure faster and faster.
+        
+  There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified
+  according  to two metrics: space complexity and time complexity.
+        
+ Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing 
+ respectively the  upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in brackets 
+ an expression in terms of n, the number of the elements of the data structure.
+        
+  
+</pre>
+<div class="hbottom">
+    <h3>Most of them fall into two categories:</h3><ul><li>Logarithmic
+        The complexity is proportional to the binary logarithm (i.e to the base 2) of n.
+        An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).
+        </li>
+        <li>Quadratic
+            The complexity is proportional to the square of n.
+            An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n2).
+            Space and time complexity can also be further subdivided into 3 different cases: best case, average case and worst case.
+        </li>
+        </ul>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their 
+        functioning while having fun!
+
+</div>
+        </div>
+</div>
+    
+    <!-- <script src="index.js"></script> -->
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/6966f125a2.js" crossorigin="anonymous"></script>
+    
+</body>
+</html>
