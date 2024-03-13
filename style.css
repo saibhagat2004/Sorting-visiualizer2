@@ -227,7 +227,7 @@ body {
             width:90%;
             font-size:25px;
             border-radius: 20px;
-            background-color: rgb(137, 225, 137);
+            background-color: rgb(98, 206, 98);
         }
         
     }
@@ -277,13 +277,12 @@ body {
         flex-direction: column;
         position: absolute;
         width: 100%;
-        background-color: rgb(127, 234, 174);
+        background-color:rgb(60, 164, 255);
         z-index: 1;
         font-size: 50px;
     }
 
     .menu li {
-        background-color: rgb(127, 234, 174);
         border-radius: 1px solid black;
         padding: 15px;
         text-align: center;
@@ -316,6 +315,8 @@ body {
         background-color: white; /* Set the initial background color to match the container */
         text-decoration: none; /* Remove the default underline for links */
         color: black; /* Set the text color */
+        background-color: rgb(60, 164, 255);
+        border-radius: 1px solid black;
         transition: background-color 0.3s; /* Add a smooth transition for the background color change */
     }
     .div2 a:hover {
@@ -328,6 +329,7 @@ body {
         padding: 0;
         margin: 0;
         font-size: 16px;
+        
     }
     .div3{
         display: flex;
@@ -345,7 +347,11 @@ body {
       .button-container{
           display: flex;
           justify-content: center;
+          width: 410px;
 
+      }
+      .button-container button{
+        padding: 6px;
       }
     .left{
         display: flex;
