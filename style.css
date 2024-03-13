@@ -242,7 +242,7 @@ body {
   }
   
   /* Media query for smartphones */
-  @media (max-width: 490px) {
+  @media (max-width: 485px) {
     body {
       font-size: 12px; /* Further adjust font size for smaller screens */
     }
